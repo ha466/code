@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformer² (Transformer Squared) | AI Cook Book</title>
+    <title>Transformer² | AI Cook Book</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -119,47 +119,48 @@
         </div>
 
         <div class="header-content reveal-on-scroll">
-            <h1 class="gradient-text">Transformer² (Transformer Squared)</h1>
+            <h1 class="gradient-text">Transformer²</h1>
             <div class="meta-tags">
-                <span>Jan 2025 (Sakana AI)</span>
+                <span>2025 (Sakana AI)</span>
                 <span>|</span>
-                <span>Self-adapting</span>
+                <span>Hybrid (attention + dynamic parameter adaptation)</span>
             </div>
-            <p>A model that dynamically literally changes its brain per prompt.</p>
+            <p>A framework for self-adaptive Transformers.</p>
         </div>
 
         <div class="content-grid">
 
             <div class="glass-panel section-card full-width reveal-on-scroll">
                 <h3>Overview & Core Idea</h3>
-                <p>Self-adapts its own weights at inference time instead of fixed recursion or static layers. Uses a two-pass system: analyzes task → dynamically mixes task-specific "expert" vectors.</p>
+                <p>Instead of fixed weights, the model learns to adapt its weights on the fly for each task. Uses a two-pass mechanism: a dispatch network identifies task properties, then task-specific expert vectors are injected.</p>
                 <div class="diagram-placeholder">
                     [ Architecture Diagram Placeholder ]
                 </div>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Key Difference from Standard Transformers</h3>
-                <p>Real test-time self-adaptation via SVD + RL-trained adapters. No full fine-tuning or external loops required.</p>
+                <h3>Key Innovation vs Standard Transformers</h3>
+                <p>Allows the model’s “brain” to change per prompt without retraining. Only selected components of weight matrices are modified at inference time, driven by RL-trained vectors.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
                 <h3>Memory System & Compute</h3>
-                <p>Task-specific adaptations are dynamically mixed into singular components of weight matrices, altering the core associative memory for the current context.</p>
+                <p>Dynamic weight adaptation acts as a task-specific associative memory switch.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Strengths & Real World Use Cases</h3>
-                <p>Handles unseen tasks dynamically. Extremely efficient adaptation on the fly.</p>
-                <ul>
-                    <li>Personalized or multi-domain local agents.</li>
-                    <li>Dynamic zero-shot task switching.</li>
-                </ul>
+                <h3>Strengths</h3>
+                <p>More efficient than full fine-tuning. Superior performance across tasks and modalities. The model essentially configures itself.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Project Fit & Resources</h3>
-                <p>Sakana AI repo + arXiv:2501.06252.</p>
+                <h3>Weaknesses</h3>
+                <p>Adds complexity (requires training adaptation module and inference routing). Extra inference overhead to combine expert vectors. Newer concept with fewer benchmarks.</p>
+            </div>
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Resources & Open Source</h3>
+                <p>ICLR 2025 paper; open-source code on GitHub (SakanaAI/self-adaptive-llms).</p>
             </div>
 
         </div>

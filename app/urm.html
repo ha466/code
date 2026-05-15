@@ -121,45 +121,46 @@
         <div class="header-content reveal-on-scroll">
             <h1 class="gradient-text">Universal Reasoning Model (URM)</h1>
             <div class="meta-tags">
-                <span>~2025–2026</span>
+                <span>2025 (Gao et al.)</span>
                 <span>|</span>
-                <span>Recursive Architecture</span>
+                <span>Recurrent (enhanced Universal Transformer)</span>
             </div>
-            <p>The next evolutionary leap for small, universal recursive setups.</p>
+            <p>A follow-up transformer designed for reasoning tasks.</p>
         </div>
 
         <div class="content-grid">
 
             <div class="glass-panel section-card full-width reveal-on-scroll">
                 <h3>Overview & Core Idea</h3>
-                <p>Building on the HRM/TRM lineage to achieve universal recursive reasoning through further simplification and generalization.</p>
+                <p>Starts from the Universal Transformer and adds a short convolution and truncated backpropagation through loops. Focuses on enhancing the recurrent inductive bias, as the main benefit comes from recurrence itself.</p>
                 <div class="diagram-placeholder">
                     [ Architecture Diagram Placeholder ]
                 </div>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Key Difference from Standard Transformers</h3>
-                <p>Further simplification and generalization of tiny recursive reasoning principles.</p>
+                <h3>Key Innovation vs Standard Transformers</h3>
+                <p>Simplification of UT. Decouples the number of recursion steps (inference) from backpropagation depth (training), using Truncated BPTT. Inserts a convolutional adapter layer.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
                 <h3>Memory System & Compute</h3>
-                <p>Highly adaptable, unified latent recursion that scales effectively without expanding layer count.</p>
+                <p>Generalizable and efficient recurrence over inputs.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Strengths & Real World Use Cases</h3>
-                <p>Aims for even broader generalization in small recursive setups.</p>
-                <ul>
-                    <li>General-purpose embedded logic engines.</li>
-                    <li>Scalable reasoning without scaling size.</li>
-                </ul>
+                <h3>Strengths</h3>
+                <p>Achieves state-of-the-art on ARC-AGI: 53.8% accuracy on ARC-AGI-1 and 16.0% on ARC-AGI-2. Demonstrates that a small, recurrent model can beat much larger LLMs.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Project Fit & Resources</h3>
-                <p>Early discussions + extensions from TRM/HRM repos.</p>
+                <h3>Weaknesses</h3>
+                <p>So far evaluated only on reasoning benchmarks. Details beyond the paper are sparse.</p>
+            </div>
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Resources & Open Source</h3>
+                <p>ArXiv (Dec 2025) and GitHub code. Early stage for research rather than production.</p>
             </div>
 
         </div>

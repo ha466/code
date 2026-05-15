@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titans (MIRAS framework) | AI Cook Book</title>
+    <title>Titans (with MIRAS) | AI Cook Book</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -119,47 +119,48 @@
         </div>
 
         <div class="header-content reveal-on-scroll">
-            <h1 class="gradient-text">Titans (MIRAS framework)</h1>
+            <h1 class="gradient-text">Titans (with MIRAS)</h1>
             <div class="meta-tags">
-                <span>Late 2024 / 2025 (Google)</span>
+                <span>2024/25 (Google)</span>
                 <span>|</span>
-                <span>Hybrid (Attention + Neural Memory)</span>
+                <span>Hybrid (Attention + Neural Long-Term Memory)</span>
             </div>
-            <p>Neural long-term memory module learning at test time.</p>
+            <p>An architecture adding long-term memory to transformers.</p>
         </div>
 
         <div class="content-grid">
 
             <div class="glass-panel section-card full-width reveal-on-scroll">
                 <h3>Overview & Core Idea</h3>
-                <p>A neural long-term memory module (MLP-based) that learns to memorize at test time, combined with traditional short-term attention.</p>
+                <p>Titans treats standard self-attention as short-term memory, and introduces a trainable neural memory module (an MLP) as long-term memory. This memory can learn to memorize and recall information from very long histories.</p>
                 <div class="diagram-placeholder">
                     [ Architecture Diagram Placeholder ]
                 </div>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Key Difference from Standard Transformers</h3>
-                <p>Test-time memorization via surprise-driven neural memory, moving beyond fixed KV caching.</p>
+                <h3>Key Innovation vs Standard Transformers</h3>
+                <p>Unlike static weights, Titans self-modifies. MIRAS is a theoretical blueprint where the model’s parameters adapt to incoming data (surprise-driven updates), learning at test time.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
                 <h3>Memory System & Compute</h3>
-                <p>Handles massive context by replacing exploding KV caches with a persistent, human-like neural memory that updates based on input surprise.</p>
+                <p>Actively updates memory during inference. The memory module summarizes large past context, letting the transformer focus on the recent context.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Strengths & Real World Use Cases</h3>
-                <p>Handles long context + persistent memory without exploding compute requirements. More human-like memory.</p>
-                <ul>
-                    <li>Long-horizon memory-heavy agents.</li>
-                    <li>Analyzing massive document repositories sequentially.</li>
-                </ul>
+                <h3>Strengths</h3>
+                <p>Handles massive contexts (>2 million tokens) with linear scalability. Outperforms pure transformers and linear-RNNs on language, reasoning, and time-series tasks. Human-like memory separation.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Project Fit & Resources</h3>
-                <p>Three variants (MAC etc.). Research-focused but highly innovative for agents.</p>
+                <h3>Weaknesses</h3>
+                <p>Complex and researchy: multiple variants exist, and training is non-trivial. Not open-sourced yet.</p>
+            </div>
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Resources & Open Source</h3>
+                <p>Google Research blog and ArXiv paper provide details; code is not publicly released as of 2026. Focus is on research impact.</p>
             </div>
 
         </div>
