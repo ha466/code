@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cook Book | Architecture Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- Scripts: three.js and anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/three-bg.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .hero {
+            text-align: center;
+            padding: 100px 0 60px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .card {
+            padding: 30px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 12px;
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--neon-cyan);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            white-space: nowrap;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            color: var(--neon-purple);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .card-footer svg {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover .card-footer svg {
+            transform: translateX(5px);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="page-transition">
+        <div class="loader-core"></div>
+    </div>
+    <div id="canvas-container"></div>
+
+    <main class="container">
+        <section class="hero reveal-on-scroll">
+            <h1 class="gradient-text">AI Cook Book</h1>
+            <p>A compendium of futuristic, recursive, and post-transformer neural architectures shaping the next era of AI.</p>
+        </section>
+
+        <section class="grid">
+            <!-- OpenMythos -->
+            <a href="app/openmythos.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>OpenMythos</h2>
+                    <span class="badge">Recursive</span>
+                </div>
+                <div class="card-meta">2026 | Recurrent-Depth</div>
+                <div class="card-desc">Prelude + single shared transformer block looped many times + Coda. Extremely parameter-efficient "deep thinking".</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Mixture-of-Recursions (MoR) -->
+            <a href="app/mor.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Mixture-of-Recursions</h2>
+                    <span class="badge">Hybrid</span>
+                </div>
+                <div class="card-meta">2025 | MoR</div>
+                <div class="card-desc">Recursive Transformer + lightweight routers assigning per-token recursion depths dynamically.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Tiny Recursive Model (TRM) -->
+            <a href="app/trm.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Tiny Recursive Model</h2>
+                    <span class="badge">Pure Recursive</span>
+                </div>
+                <div class="card-meta">Oct 2025 | TRM</div>
+                <div class="card-desc">Single tiny network (~2 layers, 7M params) recursively refining its own latent state with deep supervision.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Hierarchical Reasoning Model (HRM) -->
+            <a href="app/hrm.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Hierarchical Reasoning</h2>
+                    <span class="badge">Hierarchical</span>
+                </div>
+                <div class="card-meta">Early 2025 | HRM</div>
+                <div class="card-desc">Two small networks (low-level fast + high-level slow) recursing at different frequencies.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Titans -->
+            <a href="app/titans.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Titans</h2>
+                    <span class="badge">Hybrid</span>
+                </div>
+                <div class="card-meta">Late 2024 | MIRAS</div>
+                <div class="card-desc">Neural long-term memory module that learns to memorize at test time + short-term attention.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Universal Reasoning Model (URM) -->
+            <a href="app/urm.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Universal Reasoning</h2>
+                    <span class="badge">Recursive</span>
+                </div>
+                <div class="card-meta">2025–2026 | URM</div>
+                <div class="card-desc">Next evolution after TRM — universal recursive reasoning, aiming for broader generalization.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Baby Dragon Hatchling -->
+            <a href="app/bdh.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Dragon Hatchling</h2>
+                    <span class="badge">Scale-free Graph</span>
+                </div>
+                <div class="card-meta">Sept 2025 | BDH</div>
+                <div class="card-desc">Scale-free graph of locally interacting "neuron particles". Bio-inspired local message passing.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Transformer² -->
+            <a href="app/transformer_squared.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Transformer²</h2>
+                    <span class="badge">Self-adapting</span>
+                </div>
+                <div class="card-meta">Jan 2025 | Sakana AI</div>
+                <div class="card-desc">Self-adapts its own weights at inference time dynamically via SVD + RL-trained adapters.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- Cantor Light Fractal Model -->
+            <a href="app/lfm.html" class="glass-panel card reveal-on-scroll">
+                <div class="card-header">
+                    <h2>Light Fractal Model</h2>
+                    <span class="badge">Fractal</span>
+                </div>
+                <div class="card-meta">2025–2026 | LFM</div>
+                <div class="card-desc">Fractal/hierarchical multiscale processing. Global + local context handled concurrently in linear compute.</div>
+                <div class="card-footer">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+        </section>
+    </main>
+
+    <script>
+        // Staggered reveal for grid cards on initial load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            anime({
+                targets: cards,
+                translateY: [50, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(100, {start: 500}),
+                duration: 800,
+                easing: 'easeOutQuart'
+            });
+        });
+    </script>
+</body>
+</html>
