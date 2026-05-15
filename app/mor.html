@@ -121,45 +121,46 @@
         <div class="header-content reveal-on-scroll">
             <h1 class="gradient-text">Mixture-of-Recursions (MoR)</h1>
             <div class="meta-tags">
-                <span>2025 (Google DeepMind + KAIST + Mila)</span>
+                <span>2025 (Google DeepMind et al.)</span>
                 <span>|</span>
-                <span>Hybrid Recursive + MoE Routing</span>
+                <span>Strongly recursive (looped) with MoE routing</span>
             </div>
-            <p>Dynamic/adaptive recursion depth per token using lightweight routers.</p>
+            <p>A recursive transformer that combines parameter sharing with token-level adaptive depth.</p>
         </div>
 
         <div class="content-grid">
 
             <div class="glass-panel section-card full-width reveal-on-scroll">
                 <h3>Overview & Core Idea</h3>
-                <p>Recursive Transformer combined with lightweight routers that dynamically assign per-token recursion depths. It shares parameters and employs selective KV caching.</p>
+                <p>It uses a single shared stack of transformer layers across recursions, while lightweight routers dynamically decide how many loops each token needs. “Easy” tokens exit early; “hard” tokens recurse more. Only active tokens are attended to.</p>
                 <div class="diagram-placeholder">
                     [ Architecture Diagram Placeholder ]
                 </div>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Key Difference from Standard Transformers</h3>
-                <p>Dynamic/adaptive recursion depth per token + parameter sharing. It merges recursion efficiency with MoE-style compute routing.</p>
+                <h3>Key Innovation vs Standard Transformers</h3>
+                <p>Integrates weight tying (shared layers) and Mixture-of-Experts-like routing. It addresses the “missing KV cache” and batching problems of naive early exit by sharing loops.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
                 <h3>Memory System & Compute</h3>
-                <p>Focuses attention only on "active" tokens, bypassing recursion for simple tokens to preserve compute and memory bandwidth.</p>
+                <p>A novel recursion-wise KV caching stores only active tokens’ keys/values, preserving memory bandwidth.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Strengths & Real World Use Cases</h3>
-                <p>Combines recursion efficiency with MoE-style routing for compute. Highly efficient for varied-complexity inputs.</p>
-                <ul>
-                    <li>Mixed-complexity document analysis.</li>
-                    <li>Efficient inference on edge devices built on Llama backbones.</li>
-                </ul>
+                <h3>Strengths</h3>
+                <p>MoR reaches a new efficiency frontier: for equal FLOPs/Model size it yields lower perplexity and higher accuracy than vanilla Transformers, with ~2× inference throughput advantage. Naturally allocates compute where needed.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Project Fit & Resources</h3>
-                <p>Built on Llama backbone. GitHub raymin0223/mixture_of_recursions.</p>
+                <h3>Weaknesses</h3>
+                <p>More complex training (must learn routers) and inference logic. Routers add overhead. Tuning the recursion policies can be tricky.</p>
+            </div>
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Resources & Open Source</h3>
+                <p>Code on GitHub (raymin0223/mixture_of_recursions) built on Llama. Pretrained on FineWeb data. Good as a hybrid approach.</p>
             </div>
 
         </div>

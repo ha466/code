@@ -121,45 +121,46 @@
         <div class="header-content reveal-on-scroll">
             <h1 class="gradient-text">Baby Dragon Hatchling</h1>
             <div class="meta-tags">
-                <span>Sept/Oct 2025</span>
+                <span>2025–26 (Pathway)</span>
                 <span>|</span>
-                <span>Scale-free Graph</span>
+                <span>Graph-based recurrent</span>
             </div>
-            <p>A true post-transformer design using a living-graph style computation.</p>
+            <p>A biologically inspired graph neural network as an alternative to transformers.</p>
         </div>
 
         <div class="content-grid">
 
             <div class="glass-panel section-card full-width reveal-on-scroll">
                 <h3>Overview & Core Idea</h3>
-                <p>Not layered or looped in the classic sense. Uses a scale-free graph of locally interacting "neuron particles" where attention-like behavior emerges from dynamics.</p>
+                <p>Instead of layers, BDH consists of a scale-free network of neuron-like units (“particles”) that interact locally. Each neuron has excitatory/inhibitory connections and uses Hebbian plasticity.</p>
                 <div class="diagram-placeholder">
                     [ Architecture Diagram Placeholder ]
                 </div>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Key Difference from Standard Transformers</h3>
-                <p>Bio-inspired local message passing + Hebbian-like plasticity. True post-transformer living-graph design.</p>
+                <h3>Key Innovation vs Standard Transformers</h3>
+                <p>True post-transformer design. No large layer stacks or attention modules. Uses neuroscience principles (sparse positive activations, synaptic plasticity). Learns as it runs.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
                 <h3>Memory System & Compute</h3>
-                <p>Intrinsic memory and continuous adaptation achieved through continuous local interactions and structural plasticity.</p>
+                <p>Information propagates through local message passing. The network continuously updates its connectivity based on inputs, giving it intrinsic persistent memory.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Strengths & Real World Use Cases</h3>
-                <p>Excellent reasoning (e.g., 97.4% on hard Sudoku Extreme). Strong native reasoning without heavy CoT. Continuous learning.</p>
-                <ul>
-                    <li>Custom agents on local hardware requiring continuous adaptation.</li>
-                    <li>Long-horizon tasks needing structural plasticity.</li>
-                </ul>
+                <h3>Strengths</h3>
+                <p>Exceptionally capable at reasoning: 97.4% accuracy on Extremely Hard Sudoku without CoT. Matches GPT-2-scale performance. Built-in continuous adaptation.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Project Fit & Resources</h3>
-                <p>GitHub: pathwaycom/bdh + paper arXiv:2509.26507.</p>
+                <h3>Weaknesses</h3>
+                <p>Highly experimental and novel. Scaling to full language understanding is unproven. Implementation is unconventional (custom graph state updates).</p>
+            </div>
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Resources & Open Source</h3>
+                <p>Official implementation on GitHub (pathwaycom/bdh); paper available (Kosowski et al., 2025).</p>
             </div>
 
         </div>

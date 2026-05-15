@@ -121,45 +121,46 @@
         <div class="header-content reveal-on-scroll">
             <h1 class="gradient-text">Cantor Light Fractal Model (LFM)</h1>
             <div class="meta-tags">
-                <span>2025–2026 (Soulaiman Itani)</span>
+                <span>2025–26 (Soulaiman Itani)</span>
                 <span>|</span>
-                <span>Fractal</span>
+                <span>Hybrid fractal</span>
             </div>
-            <p>Hierarchical multiscale processing with a linear-scaling fractal structure.</p>
+            <p>A fractal hierarchical transformer processing input at multiple scales concurrently.</p>
         </div>
 
         <div class="content-grid">
 
             <div class="glass-panel section-card full-width reveal-on-scroll">
                 <h3>Overview & Core Idea</h3>
-                <p>Fractal/hierarchical multiscale processing instead of flat token attention or simple recursion. Processes context at multiple abstraction levels concurrently.</p>
+                <p>Maintains parallel embedding layers for tokens, words, phrases, sentences, and documents. Lower-level blocks are pooled to higher levels, while higher levels provide top-down conditioning.</p>
                 <div class="diagram-placeholder">
                     [ Architecture Diagram Placeholder ]
                 </div>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Key Difference from Standard Transformers</h3>
-                <p>Shifts from sequential/recurrent depth to fractal recursive abstraction. Linear scaling compute.</p>
+                <h3>Key Innovation vs Standard Transformers</h3>
+                <p>Structure is multi-resolution instead of sequential depth. Uses fractal projections (upward summarization and downward conditioning). Introduces a specialized memory anticipation module.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
                 <h3>Memory System & Compute</h3>
-                <p>Global and local context are handled together efficiently by routing representations through a fractal multiscale topology.</p>
+                <p>Hierarchical memory anticipating associations across local to global contexts.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Strengths & Real World Use Cases</h3>
-                <p>Linear compute overhead is a massive win for extremely long contexts. Conceptually fresh approach to abstraction.</p>
-                <ul>
-                    <li>Hierarchical reasoning tasks over massive datasets.</li>
-                    <li>Infinite-context analysis tools.</li>
-                </ul>
+                <h3>Strengths</h3>
+                <p>Linear compute scaling ~O(n) instead of quadratic for long contexts. Early reports show 40–60% faster training convergence. Naturally integrates global and local reasoning.</p>
             </div>
 
             <div class="glass-panel section-card reveal-on-scroll">
-                <h3>Project Fit & Resources</h3>
-                <p>Paper in IEEE Computer (2026) + related LFM work.</p>
+                <h3>Weaknesses</h3>
+                <p>Very early-stage (mostly a conceptual design). Complex multi-level state and gradients. Not yet validated on many tasks.</p>
+            </div>
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Resources & Open Source</h3>
+                <p>Described in an IEEE Computer article by Itani; no public code as of 2026.</p>
             </div>
 
         </div>
