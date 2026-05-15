@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titans (MIRAS framework) | AI Cook Book</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Use relative paths since we are in the app/ folder -->
+    <script src="../js/three-bg.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <style>
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .meta-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--neon-cyan);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-card {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section-card h3 {
+            color: var(--neon-purple);
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .section-card p, .section-card ul {
+            color: #d0d0d0;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .section-card ul {
+            padding-left: 20px;
+        }
+
+        .section-card li {
+            margin-bottom: 8px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .diagram-placeholder {
+            width: 100%;
+            height: 200px;
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px dashed var(--neon-cyan);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--neon-cyan);
+            font-family: var(--font-mono);
+            margin-top: 20px;
+        }
+
+        .nav-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+        }
+    </style>
+</head>
+<body>
+    <div id="page-transition">
+        <div class="loader-core"></div>
+    </div>
+    <div id="canvas-container"></div>
+
+    <main class="container">
+        <div class="nav-header reveal-on-scroll">
+            <a href="../index.html" class="btn-glass">&larr; Back to Index</a>
+        </div>
+
+        <div class="header-content reveal-on-scroll">
+            <h1 class="gradient-text">Titans (MIRAS framework)</h1>
+            <div class="meta-tags">
+                <span>Late 2024 / 2025 (Google)</span>
+                <span>|</span>
+                <span>Hybrid (Attention + Neural Memory)</span>
+            </div>
+            <p>Neural long-term memory module learning at test time.</p>
+        </div>
+
+        <div class="content-grid">
+
+            <div class="glass-panel section-card full-width reveal-on-scroll">
+                <h3>Overview & Core Idea</h3>
+                <p>A neural long-term memory module (MLP-based) that learns to memorize at test time, combined with traditional short-term attention.</p>
+                <div class="diagram-placeholder">
+                    [ Architecture Diagram Placeholder ]
+                </div>
+            </div>
+
+            <div class="glass-panel section-card reveal-on-scroll">
+                <h3>Key Difference from Standard Transformers</h3>
+                <p>Test-time memorization via surprise-driven neural memory, moving beyond fixed KV caching.</p>
+            </div>
+
+            <div class="glass-panel section-card reveal-on-scroll">
+                <h3>Memory System & Compute</h3>
+                <p>Handles massive context by replacing exploding KV caches with a persistent, human-like neural memory that updates based on input surprise.</p>
+            </div>
+
+            <div class="glass-panel section-card reveal-on-scroll">
+                <h3>Strengths & Real World Use Cases</h3>
+                <p>Handles long context + persistent memory without exploding compute requirements. More human-like memory.</p>
+                <ul>
+                    <li>Long-horizon memory-heavy agents.</li>
+                    <li>Analyzing massive document repositories sequentially.</li>
+                </ul>
+            </div>
+
+            <div class="glass-panel section-card reveal-on-scroll">
+                <h3>Project Fit & Resources</h3>
+                <p>Three variants (MAC etc.). Research-focused but highly innovative for agents.</p>
+            </div>
+
+        </div>
+
+        <div class="nav-footer reveal-on-scroll">
+            <a href="hrm.html" class="btn-glass">&larr; Previous Architecture</a>
+            <a href="urm.html" class="btn-glass">Next Architecture &rarr;</a>
+        </div>
+    </main>
+</body>
+</html>
